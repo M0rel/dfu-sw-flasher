@@ -1,5 +1,11 @@
+CC = gcc
+CCFLAGS = -Wall -Wpedantic
+SRCS = cli_client.c
+LDFLAGS =
+TARGET = cli-dfu-sw-flasher
+
 all:
-	gcc cli_client.c -o cli-dfu-sw-flasher
+	$(CC) $(SRCS) $(LDFLAGS) -o $(TARGET)
 
 clean:
-	rm -rf cli-dfu-sw-flasher
+	rm -rf $(TARGET)
