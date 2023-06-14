@@ -1,5 +1,3 @@
 all:
-	gcc core.c logger.c -o dfu-sw-flasher
-
-clean:
-	rm -rf dfu-sw-flasher
+	$(MAKE) -C cli_client/
+	$(MAKE) -C dfu_usb_lib
