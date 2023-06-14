@@ -1,11 +1,15 @@
 CC = gcc
 CCFLAGS = -Wall -Wpedantic
+LDFLAGS = -ldfu-usb
+LIB_PATH = ../dfu_usb_lib/out
+
 SRCS = cli_client.c
-LDFLAGS =
+INCV_PATH = ../dfu_usb_lib/
 TARGET = cli-dfu-sw-flasher
+OUT = out
 
 all:
-	$(CC) $(SRCS) $(LDFLAGS) -o $(TARGET)
+	$(CC) $(SRCS) $(CCFLAGS) -I$(INCV_PATH) -L$(LIB_PATH) $(LDFLAGS) -o $(OUT)/$(TARGET)
 
 clean:
-	rm -rf $(TARGET)
+	rm -rf $(OUT)/$(TARGET)
