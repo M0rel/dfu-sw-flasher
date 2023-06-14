@@ -1,5 +1,11 @@
+CC = gcc
+CCFLAGS = -Wall -Wpedantic
+SRCS = core.c logger.c
+LDFLAGS = -lusb-1.0
+TARGET = dfu-sw-flasher
+
 all:
-	gcc core.c logger.c -o dfu-sw-flasher -lusb-1.0
+	$(CC) $(SRCS) $(LDFLAGS) -o $(TARGET)
 
 clean:
-	rm -rf dfu-sw-flasher
+	rm -rf $(TARGET)
