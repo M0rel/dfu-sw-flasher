@@ -1,0 +1,2 @@
+Do not remove this file.
+It used to keep "out" directory under git.
