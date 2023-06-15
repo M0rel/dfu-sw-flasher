@@ -5,7 +5,7 @@ LDFLAGS = -lusb-1.0
 TARGET = dfu-usb
 TARGET_SO = lib$(TARGET).so
 TARGET_A = lib$(TARGET).a
-SRCS = dfu_usb.c logger.c
+SRCS = dfu_usb.c logger.c dfu_usb_error.c
 OUT = out
 
 # On MacOs there is issue when building with a -static flag
