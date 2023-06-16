@@ -6,9 +6,9 @@
 #include "logger.h"
 #include "dfu_usb_error.h"
 
-typedef struct dfu_usb_dev {
-        libusb_context *ctx;
-} dfu_usb_dev_st_t;
+typedef struct dfu_usb_lib_ctx {
+        libusb_context *libusb_ctx;
+} dfu_usb_lib_ctx_st_t;
 
 dfu_usb_error_t dfu_usb_library_init(void);
 void dfu_usb_library_deinit(void);
