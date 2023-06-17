@@ -1,5 +1,5 @@
 CC = gcc
-CCFLAGS = -Wall -Wpedantic -fpic
+CCFLAGS = -Wall -fpic -c
 LDFLAGS = -lusb-1.0
 
 THIRD_PARTY_PATH = ../../third-party
@@ -27,7 +27,7 @@ $(TARGET_SO): $(SRCS:.c=.o)
 	$(CC) -shared -o $(OUT)/$(TARGET_SO) $(OUT)/*.o
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $(OUT)/$@
+	$(CC) $(CCFLAGS) $(INCV_PATH) $< -o $(OUT)/$@
 
 clean:
 	rm -rf $(OUT)/*.o
