@@ -36,6 +36,9 @@ char *dfu_usb_err2str(dfu_usb_error_t error_code)
         if (IS_ERROR_PRESSENT(DFU_USB_INITIALIZATION_FAILED, error_code)) {
                 update_err_str(DFU_USB_INITIALIZATION_FAILED_STR, &err_cnt);
         }
+        if (IS_ERROR_PRESSENT(DFU_USB_LIBUSB_FAILED, error_code)) {
+                update_err_str(DFU_USB_LIBUSB_FAILED_STR, &err_cnt);
+        }
 
         return error_str;
 }

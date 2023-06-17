@@ -17,11 +17,16 @@
 #define DFU_USB_INITIALIZATION_FAILED_STR                                       \
         "Initialization failed"
 
+#define DFU_USB_LIBUSB_FAILED_STR                                               \
+        "USB library failed"
+
 #define MAX_ERR_STR_SIZE        (sizeof(DFU_USB_SUCCESS_STR) +                  \
                                  sizeof(ERROR_SEPARATOR) +                      \
                                  sizeof(DFU_USB_INVALID_VALUE_STR) +            \
                                  sizeof(ERROR_SEPARATOR) +                      \
                                  sizeof(DFU_USB_INITIALIZATION_FAILED_STR) +    \
+                                 sizeof(ERROR_SEPARATOR) +                      \
+                                 sizeof(DFU_USB_LIBUSB_FAILED_STR) +            \
                                  sizeof(ERROR_SEPARATOR) +                      \
                                  sizeof("\0"))
 
@@ -29,6 +34,7 @@ typedef enum dfu_usb_error {
         DFU_USB_SUCCESS               = 0x0,
         DFU_USB_INVALID_VALUE         = TO_ERROR(1),
         DFU_USB_INITIALIZATION_FAILED = TO_ERROR(2),
+        DFU_USB_LIBUSB_FAILED         = TO_ERROR(3),
 } dfu_usb_error_t;
 
 char *dfu_usb_err2str(dfu_usb_error_t error_code);
