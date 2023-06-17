@@ -2,6 +2,9 @@ CC = gcc
 CCFLAGS = -Wall -Wpedantic -fpic
 LDFLAGS = -lusb-1.0
 
+THIRD_PARTY_PATH = ../../third-party
+INCV_PATH = -I$(THIRD_PARTY_PATH)/list -I./public-inc
+
 TARGET = dfu-usb
 TARGET_SO = lib$(TARGET).so
 TARGET_A = lib$(TARGET).a

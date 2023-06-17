@@ -4,7 +4,7 @@ LDFLAGS = -ldfu-usb
 LIB_PATH = ../dfu_usb_lib/out
 
 SRCS = cli_client.c
-INCV_PATH = ../dfu_usb_lib/
+INCV_PATH = ../dfu_usb_lib/public-inc
 TARGET = cli-dfu-sw-flasher
 OUT = out
 
