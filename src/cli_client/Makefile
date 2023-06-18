@@ -1,6 +1,6 @@
 CC = gcc
 CCFLAGS = -Wall -Wpedantic
-LDFLAGS = -ldfu-usb
+LDFLAGS = -ldfu-usb -lusb-1.0
 LIB_PATH = ../dfu_usb_lib/out
 
 SRCS = cli_client.c

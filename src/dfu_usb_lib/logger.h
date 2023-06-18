@@ -4,7 +4,7 @@
 #include <string.h>
 
 #define LOG_TAG         "dfu_sw_flash"
-#define VERBOSITY_LIMIT 3
+#define VERBOSITY_LIMIT 2
 
 #define FILE_NAME_NO_PATH(filepath)                                             \
         strrchr((filepath), '/') ? strrchr((filepath), '/') + 1 : (filepath)
@@ -18,7 +18,7 @@ enum verbosity {
 
 #define log(verbosity, msg, fmt, ...)                                           \
         do {                                                                    \
-                log_write(verbosity, "[%s | %s:%d] %s" fmt, LOG_TAG,            \
+                log_write(verbosity, "[%s:%s:%d] %s" fmt, LOG_TAG,              \
                           FILE_NAME_NO_PATH(__FILE__), __LINE__, msg,           \
                           ## __VA_ARGS__);                                      \
         } while (0)

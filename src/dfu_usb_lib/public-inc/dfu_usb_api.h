@@ -4,6 +4,8 @@
 
 #include "dfu_usb_error.h"
 
+dfu_usb_error_t dfu_usb_get_attached_devices(void);
+
 dfu_usb_error_t dfu_usb_library_init(void);
 void dfu_usb_library_deinit(void);
 
